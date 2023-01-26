@@ -1,0 +1,16 @@
+{
+  "name": "lesson-4-6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "from-scratch.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.4.0"
+  }
+}

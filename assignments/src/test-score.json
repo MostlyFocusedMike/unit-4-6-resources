@@ -1,0 +1,14 @@
+{
+  "Debug Tests": {
+    "score": 0,
+    "maxPoints": 3
+  },
+  "Modify Tests": {
+    "score": 0,
+    "maxPoints": 4
+  },
+  "From Scratch Tests": {
+    "score": 14,
+    "maxPoints": 14
+  }
+}
