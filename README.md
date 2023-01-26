@@ -1,7 +1,7 @@
 # Lesson 4.6
 
 Here are the [Google Slides for lesson 4.6](https://docs.google.com/presentation/d/1IHGu0AR7slfAJI1uCaRL0sxX5MFf6ITwrGUcIgCI5pc/edit#slide=id.g1fac2322971_0_317),
-And the [lesson plan Google Doc](https://docs.google.com/presentation/d/1IHGu0AR7slfAJI1uCaRL0sxX5MFf6ITwrGUcIgCI5pc/edit#slide=id.g1fac2322971_0_317).
+And the [lesson plan Google Doc](https://docs.google.com/document/d/1B1qI8RijE--Nl2rduTXpgL6AOAq5x4dH8XcKfZWxRmI/edit#).
 
 ## Directory
 - assignments/
