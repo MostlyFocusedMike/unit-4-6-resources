@@ -1,8 +1,8 @@
 const { Book, Genre } = require('./modify');
-const { compileScore } = require('./utils/score-utils');
+const { ScoreCompiler } = require('../score-utils');
 
 const testSuiteName = 'Modify Tests';
-const scoreCompiler = compileScore(testSuiteName);
+const scores = new ScoreCompiler(testSuiteName);
 
 describe(testSuiteName, () => {
   it('A Genre knows its average book price', () => {
@@ -32,14 +32,14 @@ describe(testSuiteName, () => {
     notebook.delete();
     expect(romance.averageBookPrice()).toBe(faultyStars.price);
 
-    scoreCompiler(1);
+    scores.correct(expect); // DO NOT TOUCH
   });
 
   it('A Book with no genres returns null as its most popular genre', () => {
     const dune = new Book('Dune', 10.99);
     expect(dune.mostPopularGenre()).toBe(null);
 
-    scoreCompiler(1);
+    scores.correct(expect); // DO NOT TOUCH
   });
 
   it('A Book with one genre returns that genre as its most popular genre', () => {
@@ -48,7 +48,7 @@ describe(testSuiteName, () => {
     dune.addGenre(sciFy.id);
     expect(dune.mostPopularGenre()).toBe(sciFy);
 
-    scoreCompiler(1);
+    scores.correct(expect); // DO NOT TOUCH
   });
 
   it('A Book with multiple genres returns the most popular genre', () => {
@@ -79,9 +79,9 @@ describe(testSuiteName, () => {
     expect(boat.mostPopularGenre()).toBe(fantasy);
     expect(it.mostPopularGenre()).toBe(horror);
 
-    scoreCompiler(1);
+    scores.correct(expect); // DO NOT TOUCH
   });
 
-  beforeEach(() => scoreCompiler(0,1));
-  afterAll(() => scoreCompiler().saveTestResults());
+  beforeEach(() => scores.add(expect));
+  afterAll(scores.export);
 });

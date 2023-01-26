@@ -5,7 +5,8 @@
   "main": "from-scratch.js",
   "scripts": {
     "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "scores": "node ./score-utils/npm-display-script.js"
   },
   "keywords": [],
   "author": "",

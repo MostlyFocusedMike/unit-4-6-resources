@@ -1,8 +1,8 @@
 const { Owner, Cat } = require('./debug');
-const { compileScore } = require('./utils/score-utils');
+const { ScoreCompiler } = require('../score-utils');
 
 const testSuiteName = 'Debug Tests';
-const scoreCompiler = compileScore(testSuiteName);
+const scores = new ScoreCompiler(testSuiteName);
 
 describe(testSuiteName, () => {
   it('An owner can ONLY feed their own cats', () => {
@@ -26,7 +26,7 @@ describe(testSuiteName, () => {
     expect(garfield.isHungry).toBe(true);
     expect(tomcat.isHungry).toBe(true);
 
-    scoreCompiler(1)
+    scores.correct(expect); // DO NOT TOUCH
   });
 
   it('.feedCats returns the number of cats fed', () => {
@@ -44,7 +44,7 @@ describe(testSuiteName, () => {
     expect(bill.feedCats()).toBe(3);
     expect(sara.feedCats()).toBe(1);
 
-    scoreCompiler(1,0) // IGNORE PLEASE
+    scores.correct(expect); // DO NOT TOUCH
   });
 
   it('If a cat is not hungry, it is not fed', () => {
@@ -60,10 +60,10 @@ describe(testSuiteName, () => {
     garfield.isHungry = true;
     expect(bill.feedCats()).toBe(1);
 
-    scoreCompiler(1,0) // IGNORE PLEASE
+    scores.correct(expect); // DO NOT TOUCH
   });
 
   // IGNORE PLEASE
-  beforeEach(() => scoreCompiler(0,1));
-  afterAll(scoreCompiler().saveTestResults);
+  beforeEach(() => scores.add(expect));
+  afterAll(scores.export);
 });

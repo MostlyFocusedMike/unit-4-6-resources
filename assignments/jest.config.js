@@ -1,7 +1,7 @@
 /** @type {import('jest').Config} */
 const config = {
   verbose: true,
-  watchPathIgnorePatterns: ['<rootDir>/test-score.json'],
+  watchPathIgnorePatterns: ['<rootDir>/scores.json'],
 };
 
 module.exports = config;
