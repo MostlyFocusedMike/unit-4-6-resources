@@ -6,6 +6,8 @@ And the [lesson plan Google Doc](https://docs.google.com/document/d/1B1qI8RijE--
 ## Directory
 - assignments/
   - This folder is what the students would actually see and clone down for their homework.
+  - score-utils/
+    - This sub folder holds the prototype test score compiler
 - code-examples/
   - This folder would be available on the general github, it features the default snippets from the presentation
 - teacher assets/
